@@ -8,29 +8,16 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
+import './Post.css'
 
-const useStyles = makeStyles({
-  root: {
-
-
-    maxWidth: 345,
-  },
-  media: {
-    height: 140,
-  },
-});
 
 const Post = (props) => {
     const {id,title,body}=props.post;
-    const classes = useStyles();
+    
     return (
-        <Card className={classes.root}>
+        <Card className="post-card">
         <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image="/static/images/cards/contemplative-reptile.jpg"
-            title="Contemplative Reptile"
-          />
+         
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
               {title}
@@ -41,9 +28,6 @@ const Post = (props) => {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" color="primary">
-            Share
-          </Button>
           <Link to={`/post/${id}`}>
           <Button size="small" color="primary">
             See More

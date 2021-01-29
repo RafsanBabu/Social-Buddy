@@ -21,7 +21,7 @@ useEffect(()=>{
     return (
         <div>
             <h3>Title : {posts.title}</h3>
-            <p>Detais : {posts.body}</p>
+            <p>Details : {posts.body}</p>
             <h3>Comments: </h3>
             <br></br>
            {

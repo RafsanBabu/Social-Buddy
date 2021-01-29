@@ -26,6 +26,9 @@ function App() {
       <Route path="/post/:id">
        <PostDetail></PostDetail>
       </Route>
+      <Route exact path="/">
+        <Home/>
+      </Route>
     </Switch>
    </Router>
   );

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Post from '../Post/Post';
+import './Home.css'
 
 const Home = () => {
     const [posts, setpost]=useState([]);
@@ -10,7 +11,7 @@ const Home = () => {
     .then(data => setpost(data))
   },[])
     return (
-        <div>
+        <div >
         {
             posts.map(post => <Post post={post}></Post>)
       
